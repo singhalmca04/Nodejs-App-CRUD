@@ -1,0 +1,27 @@
+<table border="1" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Age</th>  
+            <th></th>          
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <form action="updateval" method="post">
+                <input type="hidden" name="_id" value="{{this._id}}"/>
+            <td><input type="text" name="uname" value="{{this.uname}}"/></td>
+            <td><input type="text" name="email" value="{{this.email}}"/></td>
+            <td><input type="text" name="phone" value="{{this.phone}}"/></td>
+            <td><input type="text" name="age" value="{{this.age}}"/></td>            
+            <td>
+                <input type="submit" value="Update">
+            </td>
+        </tr>
+        </form>
+        {{/each}}
+    </tbody>
+</table>
